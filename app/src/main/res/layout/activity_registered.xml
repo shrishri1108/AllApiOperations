@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="19dp"
+    android:layout_height="match_parent"
+    tools:context=".Registered">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="9dp"
+        android:id="@+id/card_views"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/registration_page_outer_lays"
+            android:paddingBottom="79dp"
+            android:background="#2AE91E63"
+            android:padding="11dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:textStyle="bold|normal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_name_outer_lays"
+                style="@style/ThemeOverlay.Material3.TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="31dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:hint="Enter your name here. " />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_contact_no_outer_boxs"
+                style="@style/ThemeOverlay.Material3.TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="11dp"
+                app:layout_constraintTop_toBottomOf="@id/user_name_outer_lays">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_contact_no"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="match_parent"
+                    android:hint=" enter your contact no " />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                style="@style/ThemeOverlay.Material3.TextInputEditText"
+                android:layout_marginTop="11dp"
+                android:id="@+id/user_email_outer_lays"
+                app:layout_constraintTop_toBottomOf="@id/user_contact_no_outer_boxs"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:hint="enter your email here"
+                    android:id="@+id/user_email"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                app:layout_constraintTop_toBottomOf="@id/user_email_outer_lays"
+                style="@style/ThemeOverlay.Material3.TextInputEditText"
+                android:layout_marginTop="11dp"
+                android:id="@+id/user_pwd_outer_lays"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/user_password"
+                    android:inputType="textPassword"
+                    android:layout_height="match_parent"
+                    android:hint="enter your password here "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    app:layout_constraintTop_toBottomOf="@id/user_pwd_outer_lays"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_marginTop="11dp"
+                    android:id="@+id/user_confirm_pwd_outer_lays"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/user_confirm_password"
+                        android:inputType="textPassword"
+                        android:nextFocusForward="@id/user_address"
+                        android:hint="re- enter your password "
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    app:layout_constraintTop_toBottomOf="@id/user_confirm_pwd_outer_lays"
+                    android:layout_marginTop="13dp"
+                    android:id="@+id/user_address_outer_lays"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/user_address"
+                        android:gravity="top"
+                        android:hint=" enter your address here "
+                        android:inputType="textMultiLine"
+                        android:minLines="3"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/user_address_outer_lays"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_file_name"
+                    android:layout_weight="0.5"
+                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:text="Upload"
+                    android:textAllCaps="false"
+                    android:id="@+id/upload_Img"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/show_selected_Imgs"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="0.2"
+                    />
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:background="@color/black"
+                android:elevation="9dp"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_register"
+                android:paddingLeft="39dp"
+                android:paddingBottom="3dp"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingRight="39dp"
+                app:layout_constraintBottom_toBottomOf="@id/registration_page_outer_lays"
+                app:layout_constraintBaseline_toBottomOf="@id/registration_page_outer_lays"
+                android:textColor="@color/black"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:id="@+id/btn_already_registered"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_views"
+        android:layout_marginTop="3dp"
+        android:text="Already Registered ? "
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

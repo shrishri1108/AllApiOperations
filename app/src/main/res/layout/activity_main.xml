@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="37dp"
+    android:paddingRight="37dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="29dp"
+        android:textAlignment="center"
+        android:layout_marginTop="60dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="139dp"
+        style="@style/ThemeOverlay.Material3.TextInputEditText"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="enter Your name"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        style="@style/ThemeOverlay.Material3.TextInputEditText"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        android:id="@+id/user_pwds"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="enter your password"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="#A9FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:id="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/user_pwds"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Registered? "
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#00FFFFFF"
+        android:id="@+id/btn_not_registered"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
